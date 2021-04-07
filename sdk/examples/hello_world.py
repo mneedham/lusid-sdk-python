@@ -2,18 +2,20 @@ import uuid
 import datetime
 import pytz
 
+# tag::lusid-imports[]
 import lusid
 import lusid.models as models
 from lusid.utilities import ApiConfigurationLoader
+# end::lusid-imports[]
 
-
+# tag::create-client-factory[]
 secrets_file_path = "/path/to/secrets.json"
 config = ApiConfigurationLoader.load(secrets_file_path)
 api_factory = lusid.utilities.ApiClientFactory(
     token=lusid.utilities.RefreshingToken(config),
     api_secrets_filename=secrets_file_path
 )
-
+# end::create-client-factory[]
 
 # Create portfolio
 tx_portfolios_api = api_factory.build(lusid.api.TransactionPortfoliosApi)
