@@ -18,7 +18,9 @@ api_factory = lusid.utilities.ApiClientFactory(
 # end::create-client-factory[]
 
 # Create portfolio
+# tag::create-tx-portfolios-api[]
 tx_portfolios_api = api_factory.build(lusid.api.TransactionPortfoliosApi)
+# end::create-tx-portfolios-api[]
 
 scope = "GettingStartedScope"
 guid = uuid.uuid4()
