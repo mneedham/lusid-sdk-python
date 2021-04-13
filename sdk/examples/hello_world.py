@@ -59,7 +59,7 @@ name_to_luid = {
     for _, value in instruments_response.values.items()
 }
 luid_to_name = {v: k for k, v in name_to_luid.items()}
-# end::upsert-instruments[]
+# end::get-instruments[]
 
 # tag::upsert-transactions[]
 tx_portfolios_api = api_factory.build(lusid.api.TransactionPortfoliosApi)
