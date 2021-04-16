@@ -1,11 +1,13 @@
-import uuid
-import datetime
-import pytz
-
 # tag::lusid-imports[]
+# LUSID imports
 import lusid
 import lusid.models as models
 from lusid.utilities import ApiConfigurationLoader
+
+# Other imports
+import uuid
+import datetime
+import pytz
 # end::lusid-imports[]
 
 # tag::create-client-factory[]
